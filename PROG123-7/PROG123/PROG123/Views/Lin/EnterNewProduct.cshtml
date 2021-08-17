@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+@model PROG123.Models.ProductModel 
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cart</title>
+    <style>
+        body{
+            background-color:burlywood;
+        }
+    </style>
+</head>
+<body style="margin-left:2cm">
+    <h1>My Cart</h1>
+    <br />
+    <h1>Enter New Product</h1>
+    <br />
+    <form asp-action="AddProductToDB" method="post" style="align-items">
+        <div class="inputwrap">
+            <label>Name: </label> <input asp-for="Name" required class="roundCorners" />
+        </div>
+
+        <div class="inputwrap">
+            <label>Description: </label> <input asp-for="Description" required class="roundCorners" />
+        </div>
+
+        <div class="inputwrap">
+            <label>PID: </label> <input asp-for="PID" required class="roundCorners" />
+            <br />
+        </div>
+
+        <div class="inputwrap">
+            <label>Price: </label> <input asp-for="Price" required class="roundCorners" />
+        </div>
+
+        <div class="inputwrap">
+            <label>InventoryAmount: </label> <input asp-for="InventoryAmount" required class="roundCorners" />
+        </div>
+
+        <div class="inputwrap">
+            <label><button type="submit">Submit</button></label>
+        </div>
+    </form>
+
+        <a href="@Url.Action("Index","Lin")" style=" margin-left:1cm">Back</a>
+
+</body>
+</html>

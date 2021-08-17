@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "ListAllProduct";
+    Layout = "~/Views/Shared/_Lin.cshtml";
+}
+@model LinkedList<PROG123.Models.ProductModel>
+
+<h1 style="margin-left:2cm">List All Products</h1>
+
+@foreach (PROG123.Models.ProductModel productModel in Model)
+{
+    <div class="inputwrap" style="margin-left:2cm">
+        <h3>
+            <label>@productModel.Name</label>
+            <label style="width:120px;">@productModel.Description</label>
+            <label>@productModel.Price</label>
+            <label>@productModel.PID</label>
+            <label>@productModel.InventoryAmount</label>
+
+            @*form the query string*@
+            <a href="@Url.Action("OneClickBuy", "Lin", new { PID = productModel.PID })">Buy</a>
+        </h3>
+    </div>
+}

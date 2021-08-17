@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "OneClickBuy";
+    Layout = "~/Views/Shared/_Lin.cshtml";
+}
+@model PROG123.Models.PurchaseModel
+
+<h1 style="margin-left:2cm">One Click Buy</h1>
+
+
+<div style="margin-left:2cm">
+    <h3>
+        Hi @Model.PersonModel.FName,
+        <br /><br />
+        Thanks for buying the @Model.ProductModel.Name.
+        Your credit card will be charged @Model.ProductModel.Price.ToString("C") and
+        shipped to @Model.PersonModel.Address.
+        <br />
+        Please come back again. We love your money.
+    </h3>
+</div>

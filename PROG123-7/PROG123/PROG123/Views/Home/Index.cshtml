@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+@model PROG123.Models.PersonModel
+<!DOCTYPE html>
+
+<html>
+<head style="margin-left:2cm">
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body style="margin-left:2cm">
+    <h1>Hi This is Page1</h1>
+
+    <form asp-action="Page2" method="post">
+        <label>FName</label> <input asp-for="FName" /> <br />
+        <label>LName</label> <input asp-for="LName" /> <br />
+        <label>Email</label> <input asp-for="Email" /> <br />
+        <label>Phone</label> <input asp-for="Phone" /> <br />
+        <label>Address</label> <input asp-for="Address" /> <br />
+        <label>UserName</label> <input asp-for="UserName" /> <br />
+        <label>Password</label> <input asp-for="Password" />
+
+        <button type="submit">submit</button>
+
+    </form>
+
+</body>
+</html>

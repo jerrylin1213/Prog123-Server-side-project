@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+@model PROG123.Models.ProductModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cart</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body style="margin-left:2cm">
+    <h1>AddProductToDB</h1>
+    <h3>Name: @Model.Name</h3>
+    <h3>Description: @Model.Description</h3>
+    <h3>PID: @Model.PID</h3>
+    <h3>Price: @Model.Price</h3>
+    <h3>InventoryAmount: @Model.InventoryAmount</h3>
+    <a href="@Url.Action("Index","Lin")" style=" margin-left:1cm">Back</a>
+</body>
+</html>
